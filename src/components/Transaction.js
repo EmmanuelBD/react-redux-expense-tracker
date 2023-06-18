@@ -54,23 +54,24 @@ export default function Transaction({ transaction, deleteTransaction, editTransa
   const renderEditMode = () => (
     <>
       <li>
+      <input
+          value={updatedCategory}
+          onChange={(e) => setUpdatedCategory(e.target.value)}
+        />
         <input
           value={updatedText}
           onChange={(e) => setUpdatedText(e.target.value)}
         />
-        <input
-          value={updatedAmount}
-          onChange={(e) => setUpdatedAmount(e.target.value)}
-        />
-        <input
+         <input
           value={updatedDate}
           onChange={(e) => setUpdatedDate(e.target.value)}
           type="date"
         />
         <input
-          value={updatedCategory}
-          onChange={(e) => setUpdatedCategory(e.target.value)}
+          value={updatedAmount}
+          onChange={(e) => setUpdatedAmount(e.target.value)}
         />
+       
         <button className="update-btn" onClick={handleUpdate}>
           Update
         </button>
